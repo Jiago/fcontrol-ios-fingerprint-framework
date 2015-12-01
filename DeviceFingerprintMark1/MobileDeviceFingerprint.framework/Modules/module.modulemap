@@ -1,0 +1,10 @@
+framework module MobileDeviceFingerprint {
+  umbrella header "MobileDeviceFingerprint.h"
+
+  export *
+  module * { export * }
+}
+
+module MobileDeviceFingerprint.Swift {
+    header "MobileDeviceFingerprint-Swift.h"
+}

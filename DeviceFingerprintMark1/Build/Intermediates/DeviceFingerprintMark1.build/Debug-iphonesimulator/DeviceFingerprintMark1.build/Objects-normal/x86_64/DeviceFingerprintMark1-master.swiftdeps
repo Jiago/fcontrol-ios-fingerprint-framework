@@ -1,0 +1,7 @@
+version: "Apple Swift version 2.1 (swiftlang-700.1.101.6 clang-700.1.76)"
+options: "32302d6848806ed909e26abad64610e7"
+build_time: [501162904, 549078000]
+inputs:
+  "/Users/andersonkmi/Projects/Tutorials/DeviceFingerprintMark1/DeviceFingerprintMark1/AppDelegate.swift": [501002299, 0]
+  "/Users/andersonkmi/Projects/Tutorials/DeviceFingerprintMark1/DeviceFingerprintMark1/DeviceGuru.swift": [501077868, 0]
+  "/Users/andersonkmi/Projects/Tutorials/DeviceFingerprintMark1/DeviceFingerprintMark1/ViewController.swift": [501093356, 0]

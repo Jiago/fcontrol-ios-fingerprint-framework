@@ -60,7 +60,7 @@ Uma vez feito o registro do UUID o próximo passo é a obtenção da string cont
 
 Este método devolverá uma string em formato JSON contendo as informações do dispositivo conforme exemplo:
 
-```json
+```javascript
 {"plataforma":"IOS","fabricante":"Apple","deviceID":"4A46ACD3-F4EB-4B0C-85F9-E98A2AC884B1","modelo":"Simulator","operadora":"","os":"iPhone OS","osVersion":"9.1","deviceName":"iPhone Simulator","ssidWifi":"","ddd":"","telefone":"","latitude":"","longitude":""}
 ```
 

@@ -29,7 +29,7 @@ class MobileDeviceFingerprintTests: XCTestCase {
     func testGetDeviceId() {
         let service = MobileDeviceFingerprint()
         service.registerUUID()
-        XCTAssertEqual("6EDAD19B-1B34-4D40-AC96-7AC5C6CDFAE8", service.getDeviceId())
+        XCTAssertEqual("93BF0097-8051-4CEF-AA35-2F970A090C80", service.getDeviceId())
     }
     
     func testGetDeviceName() {
@@ -45,7 +45,7 @@ class MobileDeviceFingerprintTests: XCTestCase {
     
     func testGetOSVersion() {
         let service = MobileDeviceFingerprint()
-        XCTAssertEqual("9.1", service.getOSVersion())
+        XCTAssertEqual("9.3", service.getOSVersion())
     }
     
     func testGetCarrier() {
@@ -66,13 +66,13 @@ class MobileDeviceFingerprintTests: XCTestCase {
     
     func testGetSSID() {
         let service = MobileDeviceFingerprint()
-        XCTAssertEqual("", service.getSsidWifi())
+        XCTAssertEqual("Unavailable", service.getSsidWifi())
     }
     
     func testGetDeviceFingerprint() {
         self.measureBlock {
             let service = MobileDeviceFingerprint()
-            XCTAssertEqual("{\"plataforma\":\"IOS\",\"fabricante\":\"Apple\",\"deviceID\":\"6EDAD19B-1B34-4D40-AC96-7AC5C6CDFAE8\",\"modelo\":\"Simulator\",\"operadora\":\"\",\"os\":\"iPhone OS\",\"osVersion\":\"9.1\",\"deviceName\":\"iPhone Simulator\",\"ssidWifi\":\"\",\"ddd\":\"\",\"telefone\":\"\",\"latitude\":\"\",\"longitude\":\"\"}", service.getDeviceFingerprint())
+            XCTAssertEqual("{\"plataforma\":\"IOS\",\"fabricante\":\"Apple\",\"deviceID\":\"93BF0097-8051-4CEF-AA35-2F970A090C80\",\"modelo\":\"Simulator\",\"operadora\":\"\",\"os\":\"iPhone OS\",\"osVersion\":\"9.3\",\"deviceName\":\"iPhone Simulator\",\"ssidWifi\":\"Unavailable\",\"ddd\":\"\",\"telefone\":\"\",\"latitude\":\"\",\"longitude\":\"\"}", service.getDeviceFingerprint())
         }
     }
     

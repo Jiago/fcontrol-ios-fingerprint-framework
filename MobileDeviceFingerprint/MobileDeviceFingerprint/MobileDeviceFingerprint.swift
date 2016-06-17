@@ -27,9 +27,9 @@ public class MobileDeviceFingerprint {
     
     // MARK: Public methods
     public init() {
-        operadora = retrieveCarrier()
-        modelo = retrieveDeviceModel()
-        deviceID = retrieveUUID()
+        operadora = retrieveCarrier() == nil ? "carrierNotDetected" : retrieveCarrier()
+        modelo = retrieveDeviceModel() == nil ? "deviceModelNotDetected": retrieveDeviceModel()
+        deviceID = retrieveUUID() == nil ? "uuidNotDetected" : retrieveUUID()
         osName = retrieveOperatingSystemName()
         osVersion = retrieveOperatingSystemVersion()
         deviceName = retrieveDeviceName()

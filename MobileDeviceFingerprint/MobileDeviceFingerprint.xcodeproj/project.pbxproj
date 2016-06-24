@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		24C197D41D18875B0044521A /* DeviceList.plist in Resources */ = {isa = PBXBuildFile; fileRef = 24C197D21D18875B0044521A /* DeviceList.plist */; };
+		24C197D51D18875B0044521A /* Hardware.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24C197D31D18875B0044521A /* Hardware.swift */; };
 		DA9E4C5A1BFE2A6100F14CF6 /* MobileDeviceFingerprint.h in Headers */ = {isa = PBXBuildFile; fileRef = DA9E4C591BFE2A6100F14CF6 /* MobileDeviceFingerprint.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		DA9E4C611BFE2A6100F14CF6 /* MobileDeviceFingerprint.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DA9E4C561BFE2A6100F14CF6 /* MobileDeviceFingerprint.framework */; };
 		DA9E4C661BFE2A6100F14CF6 /* MobileDeviceFingerprintTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA9E4C651BFE2A6100F14CF6 /* MobileDeviceFingerprintTests.swift */; };
@@ -26,6 +28,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		24C197D21D18875B0044521A /* DeviceList.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = DeviceList.plist; sourceTree = "<group>"; };
+		24C197D31D18875B0044521A /* Hardware.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Hardware.swift; sourceTree = "<group>"; };
 		DA9E4C561BFE2A6100F14CF6 /* MobileDeviceFingerprint.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = MobileDeviceFingerprint.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		DA9E4C591BFE2A6100F14CF6 /* MobileDeviceFingerprint.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MobileDeviceFingerprint.h; sourceTree = "<group>"; };
 		DA9E4C5B1BFE2A6100F14CF6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -77,6 +81,8 @@
 		DA9E4C581BFE2A6100F14CF6 /* MobileDeviceFingerprint */ = {
 			isa = PBXGroup;
 			children = (
+				24C197D21D18875B0044521A /* DeviceList.plist */,
+				24C197D31D18875B0044521A /* Hardware.swift */,
 				DA9E4C701BFE2D5C00F14CF6 /* FingerprintUserDefaults.swift */,
 				DA9E4C591BFE2A6100F14CF6 /* MobileDeviceFingerprint.h */,
 				DA9E4C5B1BFE2A6100F14CF6 /* Info.plist */,
@@ -157,7 +163,7 @@
 				TargetAttributes = {
 					DA9E4C551BFE2A6100F14CF6 = {
 						CreatedOnToolsVersion = 7.1.1;
-						DevelopmentTeam = TLYGB465CT;
+						DevelopmentTeam = 9GEXTQ69L7;
 					};
 					DA9E4C5F1BFE2A6100F14CF6 = {
 						CreatedOnToolsVersion = 7.1.1;
@@ -188,6 +194,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				24C197D41D18875B0044521A /* DeviceList.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -208,6 +215,7 @@
 				DA9E4C731BFE2DF700F14CF6 /* DeviceGuru.swift in Sources */,
 				DA9E4C751BFE309600F14CF6 /* MobileDeviceFingerprint.swift in Sources */,
 				DA9E4C711BFE2D5C00F14CF6 /* FingerprintUserDefaults.swift in Sources */,
+				24C197D51D18875B0044521A /* Hardware.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -323,6 +331,8 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
@@ -335,6 +345,7 @@
 				ONLY_ACTIVE_ARCH = NO;
 				PRODUCT_BUNDLE_IDENTIFIER = fcontrol.MobileDeviceFingerprint;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 				SKIP_INSTALL = YES;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
@@ -344,6 +355,8 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
@@ -356,6 +369,7 @@
 				ONLY_ACTIVE_ARCH = NO;
 				PRODUCT_BUNDLE_IDENTIFIER = fcontrol.MobileDeviceFingerprint;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 				SKIP_INSTALL = YES;
 			};
 			name = Release;

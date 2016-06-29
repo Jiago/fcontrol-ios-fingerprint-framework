@@ -23,8 +23,8 @@ public class DeviceGuru {
         sysctl(&name, 2, nil, &size, &name, 0)
         var hw_machine = [CChar](count: Int(size), repeatedValue: 0)
         sysctl(&name, 2, &hw_machine, &size, &name, 0)
-        
-        let hardware: String = String.fromCString(hw_machine)!
+
+        let hardware = String.fromCString(hw_machine) ?? ""
         return hardware
     }
     

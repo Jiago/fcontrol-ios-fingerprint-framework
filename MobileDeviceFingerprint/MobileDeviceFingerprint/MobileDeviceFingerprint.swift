@@ -27,9 +27,9 @@ public class MobileDeviceFingerprint {
     
     // MARK: Public methods
     public init() {
-        operadora = retrieveCarrier() == nil ? "carrierNotDetected" : retrieveCarrier()
-        modelo = retrieveDeviceModel() == nil ? "deviceModelNotDetected": retrieveDeviceModel()
-        deviceID = retrieveUUID() == nil ? "uuidNotDetected" : retrieveUUID()
+        operadora = retrieveCarrier() ?? "carrierNotDetected"
+        modelo = retrieveDeviceModel() ?? "deviceModelNotDetected"
+        deviceID = retrieveUUID() ?? "uuidNotDetected"
         osName = retrieveOperatingSystemName()
         osVersion = retrieveOperatingSystemVersion()
         deviceName = retrieveDeviceName()
@@ -117,26 +117,21 @@ public class MobileDeviceFingerprint {
     
     
     // MARK: Internal functions
-    internal func retrieveDeviceModel() -> String! {
-        return DeviceGuru.hardwareDescription()
+    internal func retrieveDeviceModel() -> String? {
+        return DeviceGuru.hardwareDescription() ?? nil
     }
     
-    internal func retrieveCarrier() -> String! {
+    internal func retrieveCarrier() -> String? {
         let networkInfo = CTTelephonyNetworkInfo()
         let carrier = networkInfo.subscriberCellularProvider
-        if carrier == nil || carrier?.carrierName == nil {
-            return ""
-        }
-        return carrier?.carrierName
+
+        return carrier?.carrierName ?? nil
     }
     
-    internal func retrieveUUID() -> String! {
+    internal func retrieveUUID() -> String? {
         let userDefaults = NSUserDefaults.standardUserDefaults()
-        
-        if userDefaults.objectForKey(FingerprintUserDefaults.DeviceFingerprintAttribute.rawValue) == nil {
-            return ""
-        }
-        return userDefaults.stringForKey(FingerprintUserDefaults.DeviceFingerprintAttribute.rawValue)
+
+        return userDefaults.stringForKey(FingerprintUserDefaults.DeviceFingerprintAttribute.rawValue) ?? nil
     }
     
     internal func retrieveOperatingSystemName() -> String {
